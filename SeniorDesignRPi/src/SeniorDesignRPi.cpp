@@ -12,7 +12,5 @@ using namespace std;
 int main()
 {
 	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-	int result = 5+5;
-	cout <<result;
 	return 0;
 }
