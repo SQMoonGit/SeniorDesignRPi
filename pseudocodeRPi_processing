@@ -8,18 +8,18 @@ Setup Phase:
 if start_lift
 
 get variables from sensors
-	i_height # initial height array Nx1
+	i_height 							# initial height array Nx1
 
 initialize variables
-	e_tot = 0 # total error accumulator
-	c = 0 # current iteration number
-	c_height = i_height # set current height equal to initial height array
-	valve = numpy.zeros(N,1) # ensure all valves are closed 
+	e_tot = 0 							# total error accumulator
+	c = 0 								# current iteration number
+	c_height = i_height 				# set current height equal to initial height array
+	valve = numpy.zeros(N,1) 			# ensure all valves are closed 
 	
 get variables from user interface
-	N # number of sensors in use
-	lift_size # desired height of the lift
-	step_size # user specified size of the iterations (could be multiple)
+	N 									# number of sensors in use
+	lift_size 							# desired height of the lift
+	step_size 							# user specified size of the iterations (could be multiple)
 	
 initial variables from user inputs
 	f_height = i_height + numpy.ones(N,1) * lift_size
