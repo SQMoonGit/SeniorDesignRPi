@@ -19,7 +19,7 @@ class LiftTheSlab
 		void run();
 	//private:
 
-}
+};
 
 
 int main()
@@ -34,6 +34,7 @@ LiftTheSlab::LiftTheSlab()
 
 }
 
+//Lift the slab
 void LiftTheSlab::run()
 {
 

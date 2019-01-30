@@ -10,9 +10,23 @@
 
 class SerialConnections
 {
+private:
+	bool sensor;
+	bool arduinos;
+	bool power;
+	bool gnd;
+	bool internet;
+	bool GCP;
+public:
+	void checkSensor();
+	void checkArduinos();
+	void checkPower();
+	void checkGND();
+	void checkInternet();
+	void checkGCP();
 	SerialConnections();
 	~SerialConnections();
-}
+};
 
 
 
