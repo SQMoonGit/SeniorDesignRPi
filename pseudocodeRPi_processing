@@ -1,0 +1,66 @@
+pseudocode for RPi Processing Algorithm
+
+include necessary libraries (py serial etc.)
+
+
+Setup Phase:
+
+if start_lift
+
+get variables from sensors
+	i_height 							# initial height array Nx1
+
+initialize variables
+	e_tot = 0 							# total error accumulator
+	c = 0 								# current iteration number
+	c_height = i_height 				# set current height equal to initial height array
+	valve = numpy.zeros(N,1) 			# ensure all valves are closed 
+	
+get variables from user interface
+	N 									# number of sensors in use
+	lift_size 							# desired height of the lift
+	step_size 							# user specified size of the iterations (could be multiple)
+	
+initial variables from user inputs
+	f_height = i_height + numpy.ones(N,1) * lift_size
+	
+	
+if c == 0
+	Begin lifitng cycle
+	
+	
+	c++
+	
+	while c < n_steps
+	
+		n_height = c_height + numpy.ones(N,1) * step_size
+		
+		sensor element-wise processing:
+		while current height(i) < new height(i)
+			open valve
+			valve(i) = 1
+		if current height(i) == new height(i)
+			close valve
+			valve(i) = 0
+		else if current height(i) > new height(i)
+			begin overshoot error process
+			close valve
+			valve(i) = 0
+			e_step_size = c_height(i) - n_height(i)
+			
+			if e_step_size >= step_size
+				output fatal error
+				exit program with fatal error status
+			else if e_step_size < step_size
+				update n_height with error
+				n_height += numpy.ones(N,1) * e_step_size
+				e_tot += e_step_size
+				
+				if e_tot < step_size
+					notify user of error on screen and continue
+				elseif e_tot >= step_size
+					e_tot -= step_size
+					n_steps--
+	
+	
+	
