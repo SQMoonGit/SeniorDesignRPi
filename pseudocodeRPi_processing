@@ -13,11 +13,11 @@ get variables from sensors
 initialize variables
 	e_tot = 0 							# total error accumulator
 	c = 0 								# current iteration number
-	c_height = i_height 				# set current height equal to initial height array
-	valve = numpy.zeros(N,1) 			# ensure all valves are closed 
+	c_height = i_height 						# set current height equal to initial height array
+	valve = numpy.zeros(N,1) 					# ensure all valves are closed 
 	
 get variables from user interface
-	N 									# number of sensors in use
+	N 								# number of sensors in use
 	lift_size 							# desired height of the lift
 	step_size 							# user specified size of the iterations (could be multiple)
 	
@@ -26,7 +26,7 @@ initial variables from user inputs
 	
 	
 if c == 0
-	Begin lifitng cycle
+	Begin lifting cycle
 	
 	
 	c++
@@ -58,7 +58,7 @@ if c == 0
 				
 				if e_tot < step_size
 					notify user of error on screen and continue
-				elseif e_tot >= step_size
+				else if e_tot >= step_size
 					e_tot -= step_size
 					n_steps--
 	
