@@ -7,11 +7,34 @@
 //============================================================================
 
 #include <iostream>
+#include "SerialConnections.cpp"
 using namespace std;
+
+class LiftTheSlab
+{
+	private:
+		SerialConnections check;
+	public:
+		LiftTheSlab();
+		void run();
+	//private:
+
+}
+
 
 int main()
 {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-	//this is modified
+	LiftTheSlab start;
+	start.run();
 	return 0;
+}
+
+LiftTheSlab::LiftTheSlab()
+{
+
+}
+
+void LiftTheSlab::run()
+{
+
 }
