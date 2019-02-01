@@ -8,14 +8,15 @@
 
 #include <iostream>
 #include "SerialConnections.cpp"
+#include "LiftTheSlab.cpp"
 using namespace std;
 
-class LiftTheSlab
+class Slabbing
 {
 	private:
 		SerialConnections check;
 	public:
-		LiftTheSlab();
+		Slabbing();
 		void run();
 	//private:
 
@@ -24,18 +25,18 @@ class LiftTheSlab
 
 int main()
 {
-	LiftTheSlab start;
+	Slabbing start;
 	start.run();
 	return 0;
 }
 
-LiftTheSlab::LiftTheSlab()
+Slabbing::Slabbing()
 {
 
 }
 
 //Lift the slab
-void LiftTheSlab::run()
+void Slabbing::run()
 {
 
 }
