@@ -7,8 +7,8 @@
 //============================================================================
 
 #include <iostream>
-#include "SerialConnections.cpp"
-#include "LiftTheSlab.cpp"
+#include "Sensor.cpp"
+#include "liftingProcess.cpp"
 using namespace std;
 
 class Slabbing
