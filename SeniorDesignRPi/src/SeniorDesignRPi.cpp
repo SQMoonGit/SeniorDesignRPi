@@ -7,10 +7,36 @@
 //============================================================================
 
 #include <iostream>
+#include "Sensor.cpp"
+#include "liftingProcess.cpp"
 using namespace std;
+
+class Slabbing
+{
+	private:
+		SerialConnections check;
+	public:
+		Slabbing();
+		void run();
+	//private:
+
+};
+
 
 int main()
 {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	Slabbing start;
+	start.run();
 	return 0;
+}
+
+Slabbing::Slabbing()
+{
+
+}
+
+//Lift the slab
+void Slabbing::run()
+{
+
 }
